@@ -39,7 +39,6 @@
 		553744140E4430ED00B1011D /* AppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		553744190E4431B600B1011D /* UKDiffParser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UKDiffParser.h; sourceTree = "<group>"; };
 		5537441A0E4431B600B1011D /* UKDiffParser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UKDiffParser.m; sourceTree = "<group>"; };
-		5537441F0E443B8900B1011D /* UKHelperMacros.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = UKHelperMacros.h; path = ../UliKit/UKHelperMacros.h; sourceTree = SOURCE_ROOT; };
 		553744DD0E44637F00B1011D /* UKDiffView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UKDiffView.h; sourceTree = "<group>"; };
 		553744DE0E44637F00B1011D /* UKDiffView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UKDiffView.m; sourceTree = "<group>"; };
 		5537457C0E4471E600B1011D /* Testfile1.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Testfile1.txt; sourceTree = "<group>"; };
@@ -47,6 +46,7 @@
 		5537457E0E44720000B1011D /* Testfile1.diff */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Testfile1.diff; sourceTree = "<group>"; };
 		55EA2B950E4E4E010057AFAF /* UKDiffViewChooseLeft.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = UKDiffViewChooseLeft.pdf; sourceTree = "<group>"; };
 		55EA2B960E4E4E010057AFAF /* UKDiffViewChooseRight.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = UKDiffViewChooseRight.pdf; sourceTree = "<group>"; };
+		7F5017FD16B269AD008EDDAA /* UKHelperMacros.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UKHelperMacros.h; sourceTree = "<group>"; };
 		8D1107310486CEB800E47090 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		8D1107320486CEB800E47090 /* AngelDiff.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AngelDiff.app; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -66,6 +66,7 @@
 		080E96DDFE201D6D7F000001 /* Classes */ = {
 			isa = PBXGroup;
 			children = (
+				7F5017FD16B269AD008EDDAA /* UKHelperMacros.h */,
 				553744130E4430ED00B1011D /* AppDelegate.h */,
 				553744140E4430ED00B1011D /* AppDelegate.m */,
 				553744DD0E44637F00B1011D /* UKDiffView.h */,
@@ -128,7 +129,6 @@
 			children = (
 				32CA4F630368D1EE00C91783 /* AngelDiff_Prefix.pch */,
 				29B97316FDCFA39411CA2CEA /* main.m */,
-				5537441F0E443B8900B1011D /* UKHelperMacros.h */,
 			);
 			name = "Other Sources";
 			sourceTree = "<group>";
