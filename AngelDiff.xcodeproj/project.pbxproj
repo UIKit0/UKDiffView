@@ -8,13 +8,11 @@
 
 /* Begin PBXBuildFile section */
 		1DDD58160DA1D0A300B32029 /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1DDD58140DA1D0A300B32029 /* MainMenu.xib */; };
-		3D94A55A147A747200DDA4AA /* JRSwizzle.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D94A559147A747200DDA4AA /* JRSwizzle.m */; };
 		3D94A728147AC19500DDA4AA /* NSString+AutodetectTextEncoding.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D94A727147AC19500DDA4AA /* NSString+AutodetectTextEncoding.m */; };
 		3D94A801147AD5CA00DDA4AA /* NSView+ScrollToRect.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D94A800147AD5CA00DDA4AA /* NSView+ScrollToRect.m */; };
 		553744150E4430ED00B1011D /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 553744140E4430ED00B1011D /* AppDelegate.m */; };
 		5537441B0E4431B600B1011D /* UKDiffParser.m in Sources */ = {isa = PBXBuildFile; fileRef = 5537441A0E4431B600B1011D /* UKDiffParser.m */; };
 		553744DF0E44637F00B1011D /* UKDiffView.m in Sources */ = {isa = PBXBuildFile; fileRef = 553744DE0E44637F00B1011D /* UKDiffView.m */; };
-		553748F80E48E38200B1011D /* UKObjectLogger.m in Sources */ = {isa = PBXBuildFile; fileRef = 553748F70E48E38200B1011D /* UKObjectLogger.m */; };
 		55EA2B970E4E4E010057AFAF /* UKDiffViewChooseLeft.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 55EA2B950E4E4E010057AFAF /* UKDiffViewChooseLeft.pdf */; };
 		55EA2B980E4E4E010057AFAF /* UKDiffViewChooseRight.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 55EA2B960E4E4E010057AFAF /* UKDiffViewChooseRight.pdf */; };
 		8D11072B0486CEB800E47090 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 089C165CFE840E0CC02AAC07 /* InfoPlist.strings */; };
@@ -32,8 +30,6 @@
 		29B97325FDCFA39411CA2CEA /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = /System/Library/Frameworks/Foundation.framework; sourceTree = "<absolute>"; };
 		32CA4F630368D1EE00C91783 /* AngelDiff_Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AngelDiff_Prefix.pch; sourceTree = "<group>"; };
 		3D94A51C147A6D4500DDA4AA /* Base.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; path = Base.xcconfig; sourceTree = "<group>"; };
-		3D94A558147A747200DDA4AA /* JRSwizzle.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = JRSwizzle.h; path = jrswizzle/JRSwizzle.h; sourceTree = "<group>"; };
-		3D94A559147A747200DDA4AA /* JRSwizzle.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = JRSwizzle.m; path = jrswizzle/JRSwizzle.m; sourceTree = "<group>"; };
 		3D94A726147AC19500DDA4AA /* NSString+AutodetectTextEncoding.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+AutodetectTextEncoding.h"; sourceTree = "<group>"; };
 		3D94A727147AC19500DDA4AA /* NSString+AutodetectTextEncoding.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+AutodetectTextEncoding.m"; sourceTree = "<group>"; };
 		3D94A7FF147AD5CA00DDA4AA /* NSView+ScrollToRect.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSView+ScrollToRect.h"; sourceTree = "<group>"; };
@@ -49,8 +45,6 @@
 		5537457C0E4471E600B1011D /* Testfile1.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Testfile1.txt; sourceTree = "<group>"; };
 		5537457D0E4471EE00B1011D /* Testfile2.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Testfile2.txt; sourceTree = "<group>"; };
 		5537457E0E44720000B1011D /* Testfile1.diff */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Testfile1.diff; sourceTree = "<group>"; };
-		553748F60E48E38200B1011D /* UKObjectLogger.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UKObjectLogger.h; sourceTree = "<group>"; };
-		553748F70E48E38200B1011D /* UKObjectLogger.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UKObjectLogger.m; sourceTree = "<group>"; };
 		55EA2B950E4E4E010057AFAF /* UKDiffViewChooseLeft.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = UKDiffViewChooseLeft.pdf; sourceTree = "<group>"; };
 		55EA2B960E4E4E010057AFAF /* UKDiffViewChooseRight.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = UKDiffViewChooseRight.pdf; sourceTree = "<group>"; };
 		8D1107310486CEB800E47090 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -120,7 +114,6 @@
 				5508EC040E4E5E1A00740CF8 /* Testfile1.udiff */,
 				5537457D0E4471EE00B1011D /* Testfile2.txt */,
 				080E96DDFE201D6D7F000001 /* Classes */,
-				3D94A554147A745A00DDA4AA /* ThirdParty */,
 				29B97315FDCFA39411CA2CEA /* Other Sources */,
 				29B97317FDCFA39411CA2CEA /* Resources */,
 				29B97323FDCFA39411CA2CEA /* Frameworks */,
@@ -133,8 +126,6 @@
 		29B97315FDCFA39411CA2CEA /* Other Sources */ = {
 			isa = PBXGroup;
 			children = (
-				553748F60E48E38200B1011D /* UKObjectLogger.h */,
-				553748F70E48E38200B1011D /* UKObjectLogger.m */,
 				32CA4F630368D1EE00C91783 /* AngelDiff_Prefix.pch */,
 				29B97316FDCFA39411CA2CEA /* main.m */,
 				5537441F0E443B8900B1011D /* UKHelperMacros.h */,
@@ -169,15 +160,6 @@
 				3D94A51C147A6D4500DDA4AA /* Base.xcconfig */,
 			);
 			path = Configs;
-			sourceTree = "<group>";
-		};
-		3D94A554147A745A00DDA4AA /* ThirdParty */ = {
-			isa = PBXGroup;
-			children = (
-				3D94A558147A747200DDA4AA /* JRSwizzle.h */,
-				3D94A559147A747200DDA4AA /* JRSwizzle.m */,
-			);
-			name = ThirdParty;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -248,8 +230,6 @@
 				553744150E4430ED00B1011D /* AppDelegate.m in Sources */,
 				5537441B0E4431B600B1011D /* UKDiffParser.m in Sources */,
 				553744DF0E44637F00B1011D /* UKDiffView.m in Sources */,
-				553748F80E48E38200B1011D /* UKObjectLogger.m in Sources */,
-				3D94A55A147A747200DDA4AA /* JRSwizzle.m in Sources */,
 				3D94A728147AC19500DDA4AA /* NSString+AutodetectTextEncoding.m in Sources */,
 				3D94A801147AD5CA00DDA4AA /* NSView+ScrollToRect.m in Sources */,
 			);
@@ -337,9 +317,11 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 3D94A51C147A6D4500DDA4AA /* Base.xcconfig */;
 			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_32_64_BIT)";
 				GCC_OPTIMIZATION_LEVEL = 0;
 				MACOSX_DEPLOYMENT_TARGET = 10.5;
 				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx;
 			};
 			name = Debug;
 		};
@@ -347,7 +329,9 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 3D94A51C147A6D4500DDA4AA /* Base.xcconfig */;
 			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_32_64_BIT)";
 				MACOSX_DEPLOYMENT_TARGET = 10.5;
+				SDKROOT = macosx;
 			};
 			name = Release;
 		};
