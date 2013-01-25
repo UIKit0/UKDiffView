@@ -31,7 +31,7 @@
 @class UKDiffView;
 
 
-@interface AppDelegate : NSObject
+@interface AppDelegate : NSObject <NSApplicationDelegate>
 {
 	IBOutlet UKDiffView*	diffView;
 	NSString*				currPath;

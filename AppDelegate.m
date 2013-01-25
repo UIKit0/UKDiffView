@@ -28,7 +28,6 @@
 #import "AppDelegate.h"
 #import "UKDiffParser.h"
 #import "UKDiffView.h"
-#import "UKHelperMacros.h"
 
 #import "NSString+AutodetectTextEncoding.h"
 
@@ -39,9 +38,16 @@
 
 -(void)	dealloc
 {
-	DESTROY(currPath);
+    [currPath release];
+    currPath = nil;
 	
 	[super dealloc];
+}
+
+- (void)applicationDidFinishLaunching:(NSNotification *)notification
+{
+#pragma unused(notification)
+    [self application:nil openFile:@"/Users/kkowalczyk/src/UKDiffView/Testfile1.txt"];
 }
 
 - (BOOL)application:(NSApplication *)sender openFile:(NSString *)filename

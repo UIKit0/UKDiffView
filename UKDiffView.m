@@ -25,20 +25,11 @@
 //	   distribution.
 //
 
-// -----------------------------------------------------------------------------
-//	Headers:
-// -----------------------------------------------------------------------------
-
 #import "UKDiffView.h"
 #import "UKDiffParser.h"
 #import "UKHelperMacros.h"
 
 #import "NSView+ScrollToRect.h"
-
-
-// -----------------------------------------------------------------------------
-//	Constants:
-// -----------------------------------------------------------------------------
 
 #define	ROUNDING_SIZE		(2.0f)
 #define SIDE_MARGIN			(3.0f)
@@ -46,6 +37,12 @@
 #define VERT_MARGIN			(4.0f)
 #define DIVIDER_WIDTH		(16.0f)
 
+static NSString *nonNil(NSString *s)
+{
+    if (nil == s)
+        return @"";
+    return s;
+}
 
 // -----------------------------------------------------------------------------
 //	UKCachedDiffEntry:
@@ -67,33 +64,36 @@
 	return [[[[self class] alloc] initWithLeftString: leftStr rightString: rightStr attributes: attrs applyFlag: apl] autorelease];
 }
 
-
 -(id)	initWithLeftString: (NSString*)leftStr rightString: (NSString*)rightStr attributes: (NSDictionary*)attrs applyFlag: (BOOL)apl
 {
-	if(( self = [super init] ))
-	{
-		NSAttributedString*	leftAttrStr = [[[NSAttributedString alloc] initWithString: leftStr ? leftStr : @"" attributes: attrs] autorelease];
-		leftTextStorage = [[NSTextStorage alloc] initWithAttributedString: leftAttrStr];
-		NSLayoutManager*	layoutManager = [[NSLayoutManager alloc] init];
-		NSTextContainer*	textContainer = [[NSTextContainer alloc] init];
-		[layoutManager addTextContainer:textContainer];
-		[textContainer release];
-		[leftTextStorage addLayoutManager:layoutManager];
-		[layoutManager release];
-		
-		NSAttributedString*	rightAttrStr = [[[NSAttributedString alloc] initWithString: rightStr ? rightStr : @"" attributes: attrs] autorelease];
-		rightTextStorage = [[NSTextStorage alloc] initWithAttributedString: rightAttrStr];
-		layoutManager = [[NSLayoutManager alloc] init];
-		textContainer = [[NSTextContainer alloc] init];
-		[layoutManager addTextContainer:textContainer];
-		[textContainer release];
-		[rightTextStorage addLayoutManager:layoutManager];
-		[layoutManager release];
-		
-		apply = apl;
-		
-		self.attributes = attrs;
-	}
+    self = [super init];
+    if (!self)
+        return self;
+
+    leftStr = nonNil(leftStr);
+    rightStr = nonNil(rightStr);
+    
+    NSAttributedString*	leftAttrStr = [[[NSAttributedString alloc] initWithString: leftStr attributes: attrs] autorelease];
+    leftTextStorage = [[NSTextStorage alloc] initWithAttributedString: leftAttrStr];
+    NSLayoutManager*	layoutManager = [[NSLayoutManager alloc] init];
+    NSTextContainer*	textContainer = [[NSTextContainer alloc] init];
+    [layoutManager addTextContainer:textContainer];
+    [textContainer release];
+    [leftTextStorage addLayoutManager:layoutManager];
+    [layoutManager release];
+    
+    NSAttributedString*	rightAttrStr = [[[NSAttributedString alloc] initWithString: rightStr attributes: attrs] autorelease];
+    rightTextStorage = [[NSTextStorage alloc] initWithAttributedString: rightAttrStr];
+    layoutManager = [[NSLayoutManager alloc] init];
+    textContainer = [[NSTextContainer alloc] init];
+    [layoutManager addTextContainer:textContainer];
+    [textContainer release];
+    [rightTextStorage addLayoutManager:layoutManager];
+    [layoutManager release];
+    
+    apply = apl;
+    
+    self.attributes = attrs;
 	
 	return self;
 }
@@ -107,9 +107,7 @@
 	[super dealloc];
 }
 
-
 static CGFloat sOneLineHeight = -1;
-
 
 -(NSRect)leftDrawBox {
     return leftDrawBox;
@@ -129,7 +127,7 @@ static CGFloat sOneLineHeight = -1;
 	NSLayoutManager*	layoutManager = [[leftTextStorage layoutManagers] objectAtIndex: 0];
 	NSTextContainer*	textContainer = [[layoutManager textContainers] objectAtIndex: 0];
 	[textContainer setContainerSize: NSMakeSize(box.size.width, FLT_MAX)];
-	/*(NSRange) */[layoutManager glyphRangeForTextContainer: textContainer]; // Cause re-layout.
+	[layoutManager glyphRangeForTextContainer: textContainer]; // Cause re-layout.
 	NSRect	textRect = [layoutManager usedRectForTextContainer: textContainer];
 	leftDrawBox.size.height = textRect.size.height -(endsInLineBreak ? sOneLineHeight : 0);
 }
@@ -153,7 +151,7 @@ static CGFloat sOneLineHeight = -1;
 	NSLayoutManager*	layoutManager = [[rightTextStorage layoutManagers] objectAtIndex: 0];
 	NSTextContainer*	textContainer = [[layoutManager textContainers] objectAtIndex: 0];
 	[textContainer setContainerSize: NSMakeSize(box.size.width, FLT_MAX)];
-	/*(NSRange) */[layoutManager glyphRangeForTextContainer: textContainer]; // Cause re-layout.
+	[layoutManager glyphRangeForTextContainer: textContainer]; // Cause re-layout.
 	NSRect	textRect = [layoutManager usedRectForTextContainer: textContainer];
 	rightDrawBox.size.height = textRect.size.height -(endsInLineBreak ? sOneLineHeight : 0);
 }

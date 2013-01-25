@@ -26,12 +26,9 @@
 //
 
 #import <Cocoa/Cocoa.h>
-#import "UKObjectLogger.h"
 
 
 int main(int argc, char *argv[])
 {
-	//[UKObjectLogger installUKObjectLogger];
-	
     return NSApplicationMain(argc,  (const char **) argv);
 }
